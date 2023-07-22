@@ -2,64 +2,61 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flavor!</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flavor!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
 
-  <style>
-    body,h1,h2,h3,h4,h5,h6 {font-family: "Lilita One"}
-  </style>
+    <style>
+        body,h1,h2,h3,h4,h5,h6,button {font-family: "Lilita One", cursive}  
+    </style>
 </head>
 
 <body>
-  <header>
-    <h1>Flavor! - A Recipe Website</h1>
-  </header>
+  <!-- Navbar -->
+  <nav class="navbar">
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Recipes</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-  </nav>
+    <div class="social-media">
+      <a href="https://www.instagram.com/hasbulla.hushetskiy/" class="social-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="31" viewBox="0 0 60 61" fill="none">
+        <path d="M59.9729 17.9065C59.876 14.7581 59.2947 12.4952 58.6165 10.429C57.9383 8.3629 56.8725 6.69032 55.2254 5.01774C53.5783 3.34516 51.9313 2.36129 49.9935 1.57419C48.0558 0.787097 45.9243 0.295161 42.6302 0.196774C39.2391 4.39825e-08 38.2702 0 30.0349 0C21.7995 0 20.9275 2.19912e-08 17.6334 0.0983871C14.3392 0.196774 12.3046 0.787097 10.27 1.47581C8.23537 2.16452 6.5883 3.34516 4.94122 5.01774C3.29415 6.69032 2.22839 8.3629 1.55019 10.429C0.775094 12.3968 0.29066 14.5613 0.193773 17.9065C0.0968868 21.2516 0 22.1371 0 30.5C0 38.8629 2.16559e-08 39.7484 0.0968867 43.0935C0.193773 46.4387 0.775094 48.5048 1.4533 50.571C2.13151 52.6371 3.19726 54.3097 4.84434 55.9823C6.49141 57.6548 8.23537 58.7371 10.1731 59.4258C12.1108 60.1145 14.2423 60.7048 17.5365 60.8032C20.8306 61 21.7026 61 29.938 61C38.1734 61 39.0453 61 42.3395 60.9016C45.6336 60.8032 47.6683 60.2129 49.7029 59.5242C51.7375 58.8355 53.3846 57.7532 55.0316 56.0806C56.6787 54.4081 57.7445 52.6371 58.4227 50.6694C59.1009 48.7016 59.6822 46.5371 59.7791 43.1919C59.876 40.0436 59.876 39.0597 59.876 30.6968C59.876 22.3339 60.0698 21.2516 59.9729 17.9065ZM54.5472 42.7984C54.4503 45.75 53.869 47.3242 53.4815 48.5048C52.9001 49.8823 52.2219 50.9645 51.1562 51.9484C50.0904 53.0306 49.1216 53.621 47.7651 54.3097C46.6994 54.7032 45.1492 55.2935 42.1457 55.3919C39.0453 55.3919 38.0765 55.3919 30.1318 55.3919C22.1871 55.3919 21.1213 55.3919 18.0209 55.2936C15.1143 55.1952 13.5641 54.6048 12.4015 54.2113C11.0451 53.621 9.97933 52.9323 9.01046 51.85C7.94471 50.7677 7.36339 49.7839 6.68518 48.4065C6.29764 47.3242 5.71632 45.75 5.61943 42.7C5.61943 39.65 5.61943 38.6661 5.61943 30.5C5.61943 22.3339 5.61943 21.35 5.71632 18.2016C5.8132 15.25 6.39452 13.6758 6.78207 12.4952C7.36339 11.1177 8.0416 10.0355 9.01046 9.05161C10.0762 7.96935 11.0451 7.37903 12.4015 6.78871C13.4673 6.39516 15.0174 5.80484 18.0209 5.70645C21.1213 5.60806 22.0902 5.60806 30.1318 5.60806C38.1734 5.60806 39.1422 5.60806 42.2426 5.70645C45.1492 5.80484 46.6994 6.39516 47.862 6.78871C49.2184 7.37903 50.2842 8.06774 51.2531 9.05161C52.3188 10.1339 52.9001 11.1177 53.5783 12.4952C53.9659 13.5774 54.5472 15.1516 54.6441 18.2016C54.741 21.35 54.741 22.3339 54.741 30.5C54.741 38.6661 54.6441 39.65 54.5472 42.7984Z" fill="#F8F8F8"/>
+        <path d="M30.0364 14.8561C21.4135 14.8561 14.6315 21.9399 14.6315 30.4996C14.6315 39.2561 21.6073 46.1432 30.0364 46.1432C38.4656 46.1432 45.5383 39.2561 45.5383 30.4996C45.5383 21.7432 38.6594 14.8561 30.0364 14.8561ZM30.0364 40.7319C24.417 40.7319 19.9602 36.1077 19.9602 30.4996C19.9602 24.8915 24.5139 20.2674 30.0364 20.2674C35.6559 20.2674 40.1127 24.7932 40.1127 30.4996C40.1127 36.2061 35.6559 40.7319 30.0364 40.7319Z" fill="#F8F8F8"/>
+        <path d="M46.215 17.8083C48.1948 17.8083 49.7998 16.1784 49.7998 14.1679C49.7998 12.1574 48.1948 10.5276 46.215 10.5276C44.2351 10.5276 42.6301 12.1574 42.6301 14.1679C42.6301 16.1784 44.2351 17.8083 46.215 17.8083Z" fill="#F8F8F8"/>
+        </svg>
+      </a> 
 
-  <div class="container">
-    <div class="recipe-card">
-      <h2 class="recipe-title">Delicious Chocolate Cake</h2>
-      <img class="recipe-image" src="chocolate-cake.jpg" alt="Delicious Chocolate Cake">
-      <p class="recipe-description">A rich and moist chocolate cake that will satisfy your sweet cravings.</p>
-      <h3 class="recipe-ingredients">Ingredients:</h3>
-      <ul>
-        <li>2 cups all-purpose flour</li>
-        <li>1 3/4 cups granulated sugar</li>
-        <li>3/4 cup unsweetened cocoa powder</li>
-        <li>2 1/2 teaspoons baking powder</li>
-        <li>1 1/2 teaspoons baking soda</li>
-        <li>1 teaspoon salt</li>
-        <li>2 eggs</li>
-        <li>1 cup milk</li>
-        <li>1/2 cup vegetable oil</li>
-        <li>2 teaspoons vanilla extract</li>
-        <li>1 cup boiling water</li>
-      </ul>
-      <h3 class="recipe-instructions">Instructions:</h3>
-      <ol>
-        <li>Preheat the oven to 350°F (175°C). Grease and flour two 9-inch round cake pans.</li>
-        <li>In a large bowl, whisk together flour, sugar, cocoa powder, baking powder, baking soda, and salt.</li>
-        <li>Add eggs, milk, oil, and vanilla extract. Mix until smooth.</li>
-        <li>Stir in the boiling water. The batter will be thin.</li>
-        <li>Pour the batter evenly into the prepared pans.</li>
-        <li>Bake for 30 to 35 minutes or until a toothpick inserted into the center comes out clean.</li>
-        <li>Let the cakes cool in the pans for 10 minutes, then transfer to wire racks to cool completely.</li>
-      </ol>
+      <a href="https://www.twitter.com" class="social-icon">    
+        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="31" viewBox="0 0 75 61" fill="none">
+        <path d="M66.6532 10.5049L71.25 4.77495C72.5806 3.22309 72.9436 2.02935 73.0645 1.43249C69.4355 3.58121 66.0484 4.29746 63.871 4.29746H63.0242L62.5403 3.81996C59.6371 1.31311 56.0081 0 52.1371 0C43.6694 0 37.0161 6.92368 37.0161 14.9217C37.0161 15.3992 37.0161 16.1155 37.1371 16.593L37.5 18.9804L34.9597 18.8611C19.4758 18.3836 6.77419 5.25245 4.71774 2.98434C1.33065 8.95303 3.26613 14.683 5.32258 18.2642L9.43548 24.9491L2.90323 21.3679C3.02419 26.3816 4.95968 30.3209 8.70968 33.1859L11.9758 35.5734L8.70968 36.8865C10.7661 42.9746 15.3629 45.4814 18.75 46.4364L23.2258 47.6301L18.9919 50.4951C12.2177 55.2701 3.75 54.9119 0 54.5538C7.62097 59.8063 16.6935 61 22.9839 61C27.7016 61 31.2097 60.5225 32.0565 60.1644C65.9274 52.2857 67.5 22.4423 67.5 16.4736V15.638L68.2258 15.1605C72.3387 11.3405 74.0323 9.31115 75 8.11742C74.6371 8.23679 74.1532 8.47554 73.6694 8.59491L66.6532 10.5049Z" fill="#F8F8F8"/>
+        </svg>
+      </a> 
+
+      <a href="https://www.facebook.com" class="social-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 61 61" fill="none">
+        <path d="M57.5565 0H3.44355C1.47581 0 0 1.57419 0 3.44355V57.5565C0 59.5242 1.57419 61 3.44355 61H32.5661V37.2887H24.6952V28.1387H32.5661V21.35C32.5661 13.479 37.2887 9.15 44.3726 9.15C46.7339 9.15 49.0952 9.24839 51.4565 9.54355V17.7097H46.7339C42.9952 17.7097 42.2081 19.4806 42.2081 22.1371V27.9419H51.1613L49.8823 37.1903H42.0113V60.6065H57.5565C59.5242 60.6065 61 59.1306 61 57.1629V3.44355C60.9016 1.47581 59.3274 0 57.5565 0Z" fill="#F8F8F8"/>
+      </svg>
+      </a>
+      <a href="https://www.youtube.com/@SupremeLeaderKimJong-un" class="social-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="58" height="31" viewBox="0 0 88 61" fill="none">
+        <path d="M86.1548 9.5576C85.1613 5.76267 82.1806 2.81106 78.3484 1.82719C71.5355 3.35104e-07 44 0 44 0C44 0 16.4645 3.35104e-07 9.65161 1.82719C5.81935 2.81106 2.83871 5.76267 1.84516 9.5576C0 16.4447 0 30.5 0 30.5C0 30.5 0 44.6959 1.84516 51.4424C2.83871 55.2373 5.81935 58.1889 9.65161 59.1728C16.4645 61 44 61 44 61C44 61 71.5355 61 78.3484 59.1728C82.1806 58.1889 85.1613 55.2373 86.1548 51.4424C88 44.6959 88 30.5 88 30.5C88 30.5 88 16.4447 86.1548 9.5576ZM35.2 43.5714V17.4286L58.0516 30.5L35.2 43.5714Z" fill="#F8F8F8"/>
+        </svg>
+      </a>
+
     </div>
-  </div>
 
+    <div class="logo">
+      <img alt="Logo" src="Flavor!.png">
+    </div>
+
+    <div class="login-recipes">
+      <button class="recipes-button">Recipes</button>
+      <button class="login-button">Login</button>
+    </div>
+  </nav>
 </body>
 
 </html>
