@@ -122,52 +122,6 @@ const recipes = [
 ];
   
   
-  function showFilterDropdown() {
-    const filterDropdown = document.getElementById("filterDropdown");
-    filterDropdown.style.display = "block";
-  }
-  
-  function hideFilterDropdown() {
-    const filterDropdown = document.getElementById("filterDropdown");
-    filterDropdown.style.display = "none";
-  }
-  
-  function displayRecipes(recipeList) {
-    const recipeContainer = document.getElementById('recipe-list');
-    recipeContainer.innerHTML = '';
-  
-    for (let i = 0; i < recipeList.length; i++) {
-      const recipe = recipeList[i];
-      const recipeCard = document.createElement('div');
-      recipeCard.textContent = recipe.title;
-      recipeContainer.appendChild(recipeCard);
-    }
-  }
-  
-  function filterByDiet(diet) {
-    const filteredRecipes = recipes.filter(recipe => diet === 'all' || recipe.diet === diet);
-    displayRecipes(filteredRecipes);
-  }
-  
-  function filterByMealType(mealType) {
-    const filteredRecipes = recipes.filter(recipe => mealType === 'all' || recipe.mealType === mealType);
-    displayRecipes(filteredRecipes);
-  }
-  
-  function filterByRating(minRating) {
-    const filteredRecipes = recipes.filter(recipe => recipe.rating >= minRating);
-    displayRecipes(filteredRecipes);
-  }
-  
-  function resetFilters() {
-    displayRecipes(recipes);
-  }
-  
-  // Initially display all recipes
-  displayRecipes(recipes);
-  
-
-
 function showFilterDropdown() {
     const filterDropdown = document.getElementById("filterDropdown");
     filterDropdown.style.display = "block";
@@ -179,35 +133,70 @@ function showFilterDropdown() {
   }
   
   function displayRecipes(recipeList) {
-    const recipeContainer = document.getElementById('recipe-list');
+    const recipeContainer = document.getElementsByClassName('recipe-list')[0]; 
+    if (!recipeContainer) return; 
+  
     recipeContainer.innerHTML = '';
   
     for (let i = 0; i < recipeList.length; i++) {
       const recipe = recipeList[i];
       const recipeCard = document.createElement('div');
-      recipeCard.textContent = recipe.title;
+      recipeCard.className = "recipe-card";
+  
+      const recipeImage = document.createElement('img');
+      recipeImage.src = recipe.imageSrc;
+      recipeImage.alt = recipe.title;
+      recipeCard.appendChild(recipeImage);
+  
+      const recipeInfo = document.createElement('div');
+      recipeInfo.className = "recipe-info";
+  
+      const recipeTitle = document.createElement('h2');
+      recipeTitle.textContent = recipe.title;
+      recipeInfo.appendChild(recipeTitle);
+  
+      const recipeRating = document.createElement('p');
+      recipeRating.innerHTML = `<i class="fas fa-star" style="color: gold;"></i> ${recipe.rating}/5`;
+      recipeInfo.appendChild(recipeRating);
+  
+      const recipeDiet = document.createElement('p');
+      recipeDiet.innerHTML = `<i class="fas fa-utensils"></i> ${recipe.diet}`;
+      recipeInfo.appendChild(recipeDiet);
+  
+      const recipeMealType = document.createElement('p');
+      recipeMealType.innerHTML = `<i class="fas fa-utensil-spoon"></i> ${recipe.mealType}`;
+      recipeInfo.appendChild(recipeMealType);
+  
+      recipeCard.appendChild(recipeInfo);
       recipeContainer.appendChild(recipeCard);
     }
   }
   
+
   function filterByDiet(diet) {
-    const filteredRecipes = recipes.filter(recipe => diet === 'all' || recipe.diet === diet);
+    const filteredRecipes = recipes.filter(function(recipe) {
+      return diet === 'all' || recipe.diet === diet;
+    });
     displayRecipes(filteredRecipes);
   }
   
-  function filterByMealType(mealType) {
-    const filteredRecipes = recipes.filter(recipe => mealType === 'all' || recipe.mealType === mealType);
+  
+function filterByMealType(mealType) {
+    const filteredRecipes = recipes.filter(function(recipe) {
+      return mealType === 'all' || recipe.mealType === mealType;
+    });
     displayRecipes(filteredRecipes);
   }
   
   function filterByRating(minRating) {
-    const filteredRecipes = recipes.filter(recipe => recipe.rating >= minRating);
+    const filteredRecipes = recipes.filter(function(recipe) {
+      return recipe.rating >= minRating;
+    });
     displayRecipes(filteredRecipes);
   }
   
   function resetFilters() {
     displayRecipes(recipes);
   }
-  
-console.log(5==5);
-  
+
+  displayRecipes(recipes);

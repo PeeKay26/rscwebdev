@@ -3,7 +3,7 @@
 <head>
   <title>Recipes</title>
   <link rel="stylesheet" href="style.css">
-  <script src="myscripts.js"></script>
+  <script src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,20 +72,21 @@
   </header>
   <main>
 
-    <div class="filter-button" onmouseover="showFilterDropdown()" onmouseout="hideFilterDropdown()">
-        Filter Recipes ▼
+    <div class="filter-button-container" onmouseover="showFilterDropdown()" onmouseout="hideFilterDropdown()">
+        <button class="filter-button">Filter Recipes ▼</button>
         <div class="filter-dropdown" id="filterDropdown">
-            <button onclick="filterByDiet('Vegetarian')">All</button>
+          <button onclick="resetFilters()">All</button>
           <button onclick="filterByDiet('Vegetarian')">Vegetarian</button>
           <button onclick="filterByDiet('Vegan')">Vegan</button>
           <button onclick="filterByDiet('Gluten-Free')">Gluten-Free</button>
+          <button onclick="filterByDiet('Keto')">Keto</button>
           <button onclick="filterByMealType('Lunch')">Lunch</button>
           <button onclick="filterByMealType('Dinner')">Dinner</button>
           <button onclick="filterByRating(4.5)">Above 4.5 stars</button>
         </div>
       </div>
 
-    <section class="recipe-cards">
+    <section class="recipe-list">
         
       <div class="recipe-card">
         <img src="Vegetable-Pasta-Bake-Square-FS-19.jpg" alt="Recipe 1">
